@@ -20,7 +20,7 @@ class ApiProvider {
     );
   }
 
-  Future<http.Response> createUser({required String token,required String username,
+    Future<http.Response> createUser({required String token,required String username,
     required  String password,required String fullname,required String email}) async {
     String url = '$endPoint/register';
     var body = {
@@ -34,5 +34,9 @@ class ApiProvider {
       body: body,
       headers: {HttpHeaders.authorizationHeader: "Bearer $token"},
     );
+  }
+
+  static createState(String text, String text2, String text3, String text4) {
+    
   }
 }

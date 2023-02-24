@@ -73,12 +73,20 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         automaticallyImplyLeading: false,
-        title: const Text("เเสดง user ทั้งหมด"),
-        backgroundColor: Color.fromARGB(255, 172, 25, 198),
+        title: const Text(
+          "P SHOP",
+          style: TextStyle(
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 24),
+        ),
+        backgroundColor: Color.fromARGB(255, 253, 251, 253),
         actions: [
           IconButton(
-            icon: const Icon(Icons.person_add),
+            icon: const Icon(
+              Icons.person_add,
+              color: Colors.black,
+            ),
             tooltip: 'Setting Icon',
             onPressed: () {
               showDialog(
@@ -150,7 +158,10 @@ class _HomeScreenState extends State<HomeScreen> {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.logout),
+            icon: const Icon(
+              Icons.logout,
+              color: Colors.black,
+            ),
             onPressed: () async {
               SharedPreferences prefs = await SharedPreferences.getInstance();
               prefs.remove('token');
@@ -161,17 +172,145 @@ class _HomeScreenState extends State<HomeScreen> {
         ],
       ),
       body: Container(
-        child: ListView.builder(
-          padding: const EdgeInsets.all(8),
-          itemCount: datalist.length,
-          itemBuilder: (BuildContext context, int index) {
-            return ListTile(
-              title: Text(datalist[index]["username"]),
-              subtitle: Text(datalist[index]["email"]),
-            );
-          },
-        ),
-      ),
+          child: ListView(
+        children: [
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 15),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Card(
+                child: Image.asset('assets/images/m8.png'),
+                color: Color.fromARGB(255, 236, 210, 15),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/g6.png'),
+              color: Color.fromARGB(255, 72, 225, 177),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/k6.png'),
+              color: Color.fromARGB(255, 235, 158, 242),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/g2.png'),
+              color: Color.fromARGB(255, 92, 110, 241),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/k2.png'),
+              color: Color.fromARGB(255, 241, 71, 148),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/m10.png'),
+              color: Color.fromARGB(255, 106, 233, 91),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/g7.png'),
+              color: Color.fromARGB(255, 16, 191, 226),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/k1.png'),
+              color: Color.fromARGB(255, 254, 216, 26),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/k4.png'),
+              color: Color.fromARGB(255, 38, 181, 206),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/m6.png'),
+              color: Color.fromARGB(255, 240, 111, 189),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.only(bottom: 0, top: 0),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 1),
+            height: 230,
+            child: Card(
+              child: Image.asset('assets/images/m1.png'),
+              color: Color.fromARGB(255, 241, 163, 28),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(25),
+              ),
+            ),
+          ),
+        ],
+      )),
     );
   }
 }

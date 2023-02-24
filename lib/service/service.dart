@@ -8,7 +8,7 @@ class ServiceAPI {
   ));
 
   static Future<bool>? signup(
-      String username, String password, String email) async {
+      String username, String password, String email, String text) async {
     return await _dio.post("auth/signup", data: {
       "username": username,
       "email": email,
@@ -22,4 +22,6 @@ class ServiceAPI {
       "password": password
     }).then((value) => Future.value(value));
   }
+
+  static createState(String text, String text2, String text3, String text4) {}
 }

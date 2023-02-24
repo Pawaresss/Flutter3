@@ -12,9 +12,11 @@ class SignUpScreenTopImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(
-          "Sign Up".toUpperCase(),
-          style: TextStyle(fontWeight: FontWeight.bold),
+        Container(
+          child: Text(
+            "Sign Up".toUpperCase(),
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
         ),
         SizedBox(height: defaultPadding),
         Row(
@@ -22,7 +24,7 @@ class SignUpScreenTopImage extends StatelessWidget {
             const Spacer(),
             Expanded(
               flex: 8,
-              child: SvgPicture.asset("assets/icons/signup.svg"),
+              child: SvgPicture.asset(""),
             ),
             const Spacer(),
           ],
