@@ -13,7 +13,7 @@ class LoginScreenTopImage extends StatelessWidget {
     return Column(
       children: [
         const Text(
-          "LOGIN",
+          "",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: defaultPadding * 2),
@@ -21,13 +21,13 @@ class LoginScreenTopImage extends StatelessWidget {
           children: [
             const Spacer(),
             Expanded(
-              flex: 2,
-              child: SvgPicture.asset(""),
+              flex: 3,
+              child: Image.asset("assets/images/jjj.gif"),
             ),
             const Spacer(),
           ],
         ),
-       const SizedBox(height: defaultPadding * 0),
+        const SizedBox(height: defaultPadding * 0),
       ],
     );
   }

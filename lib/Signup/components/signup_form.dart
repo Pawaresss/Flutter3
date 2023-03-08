@@ -98,7 +98,7 @@ class _SignUpFormState extends State<SignUpForm> {
                   dialogPassword.text != "" ||
                   dialogFullname.text != "" ||
                   dialogEmail.text != "") {
-                log("ok");
+               
                 SharedPreferences prefs = await SharedPreferences.getInstance();
                 var token = prefs.getString('token') ?? "";
                 ApiProvider()
